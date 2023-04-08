@@ -10,9 +10,18 @@ import java.util.List;
 @RestController
 public class FriendController {
 
-    Friend friend = new Friend(0, Arrays.asList("Pelle", "P"), LocalDate.parse("1990-05-20"), "Storgatan", Arrays.asList("123", "4214"));
-    Friend friend1 = new Friend(1, Arrays.asList("Snorre", "S"),LocalDate.parse("1980-05-20"), "mellangatan", Arrays.asList("222", "33333"));
-    Friend friend2 = new Friend(2, Arrays.asList("Gonnor", "G"),LocalDate.parse("1970-05-20"), "lillgatan", Arrays.asList("4444", "5555555"));
+    Friend friend = new Friend(0, Arrays.asList("Pelle", "P")
+            , LocalDate.parse("1990-05-20")
+            , "Storgatan"
+            , Arrays.asList("123", "4214"));
+    Friend friend1 = new Friend(1, Arrays.asList("Snorre", "S")
+            , LocalDate.parse("1980-05-20")
+            , "mellangatan"
+            , Arrays.asList("222", "33333"));
+    Friend friend2 = new Friend(2, Arrays.asList("Gonnor", "G")
+            , LocalDate.parse("1970-05-20")
+            , "lillgatan"
+            , Arrays.asList("4444", "5555555"));
     FriendDAO friendDAO = new FriendDAO();
 
 
