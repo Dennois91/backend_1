@@ -2,7 +2,6 @@ package week2.backend_1_week_2.Models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -16,13 +15,21 @@ import lombok.NoArgsConstructor;
 public class Kompis {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "")
+    @GeneratedValue
     private long id;
     String name;
     String adress;
     String mobilnummer;
 
+    public Kompis(String name, String adress, String mobilnummer) {
+        this.name = name;
+        this.adress = adress;
+        this.mobilnummer = mobilnummer;
+    }
+
+
 }
+
 /*
 • Skapa sedan en POJO Kompis.java
 • Konpis ska minst ha:
