@@ -1,5 +1,6 @@
 package com.example.assignment_4_8.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -40,6 +41,7 @@ public class Kund {
 
     @ManyToOne
     @JoinColumn
+    @JsonIgnore
     private Kategory kategory;
 
     @ManyToMany(cascade = CascadeType.ALL)
