@@ -5,3 +5,5 @@ Troubleshooting git
 
 
 Commiting from computer
+
+After git config removed invisible thing in email
