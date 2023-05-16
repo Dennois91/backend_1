@@ -2,3 +2,6 @@
 Backend oriented course assignments using Spring, Hibernate, Building REST-API. 
 
 Troubleshooting git
+
+
+Commiting from computer

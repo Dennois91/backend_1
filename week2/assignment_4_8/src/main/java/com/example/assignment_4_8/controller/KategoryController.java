@@ -2,10 +2,7 @@ package com.example.assignment_4_8.controller;
 
 import com.example.assignment_4_8.model.Kategory;
 import com.example.assignment_4_8.repository.KategoryRepo;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
@@ -39,5 +36,13 @@ public class KategoryController {
     public Kategory getKategoryById(@PathVariable Long id) {
         return kategoryRepo.findById(id).get();
         //http://localhost:8080/kategoryById/1
+    }
+
+    //create a method to add by POST
+    @PostMapping("/category/add")
+    public String addCategoryPost(@RequestBody Kategory kategory) {
+        kategoryRepo.save(kategory);
+        return "Kategory added " + kategory.getName() + " Added";
+
     }
 }
